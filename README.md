@@ -1,17 +1,45 @@
 # Ayush Mukhi
 
-Finance student at George Mason University working on market microstructure. Current focus: a research note on whether order-flow imbalance and entropy features predict short-horizon price moves and volatility, and whether any signal survives trading costs.
+Finance student at George Mason University working on market microstructure.
+
+I recently completed a pre-registered measurement study asking whether
+order-flow imbalance and entropy features predict short-horizon price moves —
+and whether anything survives trading costs. The design was committed to git
+before any model was fit, all 1,020 enumerated configurations were reported,
+and the honest answer turned out to be the interesting part: **the
+predictability is real and remarkably consistent, costs kill it by an order of
+magnitude, and the entropy hypothesis the project was founded on adds nothing
+beyond the flow features it is computed from.** The ten-minute version:
+**[the research note](https://github.com/yushingtoncity/market-entropy/blob/main/report/v3_research_note.md)**.
 
 ## Research
-- **[market-entropy](https://github.com/yushingtoncity/market-entropy)**: microstructure research in progress. v0 built the pipeline on 1-minute bars and says so plainly; v1 validates real Lee-Ready classification and order book handling on LOBSTER NASDAQ sample data; v2 runs the main study on tick-level crypto L2 (Tardis.dev) with walk-forward validation, cost sensitivity, and naive baselines.
+
+- **[market-entropy](https://github.com/yushingtoncity/market-entropy)** — the
+  full arc, kept honest at every step: a v0 pipeline that states its data
+  limits plainly; v1 validation against NASDAQ ITCH-derived ground truth
+  (LOBSTER), including trade-sign classifiers scored against true aggressor
+  labels; v2a, a provenance-pinned tick dataset (Binance perpetuals via
+  Tardis.dev, every file sha256-logged in a committed manifest); v2b, the
+  pre-registered walk-forward study — decay curves, breakeven cost curves, a
+  written Deviations section, and a null result documented with the same care
+  as a positive one.
 
 ## Analysis
-- **[portfolio-optimization](https://github.com/yushingtoncity/portfolio-optimization)**: out-of-sample allocation comparison (equal weight, inverse vol, min variance). Every number in the README regenerates with one command.
-- **[mag7-quant-pipeline](https://github.com/yushingtoncity/mag7-quant-pipeline)**: daily MAG7 vs SPY analytics pipeline and market journal.
-- **[sma_backtest](https://github.com/yushingtoncity/sma_backtest)**: early learning exercise, kept for progression history.
+
+- **[portfolio-optimization](https://github.com/yushingtoncity/portfolio-optimization)** —
+  out-of-sample comparison of equal-weight, inverse-vol, and constrained
+  min-variance allocations. Every number in the README regenerates with one
+  command, and the predicted-vs-realized volatility figure puts estimation
+  error on display deliberately.
+- **[mag7-quant-pipeline](https://github.com/yushingtoncity/mag7-quant-pipeline)** —
+  daily MAG7 vs SPY analytics pipeline and market journal.
+- **[sma_backtest](https://github.com/yushingtoncity/sma_backtest)** — early
+  learning exercise, kept for progression history.
 
 ## Also building
-- **payload.gg**: real-time AI coaching platform for Overwatch (solo project).
-- **AEGIS**: agentic trading research platform on the Claude API, paper trading only.
+
+- **payload.gg** — real-time AI coaching platform for Overwatch (solo project).
+- **AEGIS** — agentic trading research platform on the Claude API, paper
+  trading only.
 
 Python (pandas, NumPy), SQL, Git.
