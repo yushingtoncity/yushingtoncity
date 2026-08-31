@@ -44,6 +44,9 @@ beyond the flow features it is computed from.** The ten-minute version:
 
 - **payload.gg** — real-time AI coaching platform for Overwatch (solo project).
 - **[AEGIS](https://github.com/yushingtoncity/AEGIS)** — agentic trading
-  research platform on the Claude API, paper trading only.
+  research platform built on the rule that the LLM proposes and deterministic
+  code disposes. Phases 0 and 1 of 10 complete: a typed data layer over the
+  Alpaca paper API, operator CLIs, and 76 passing tests; the Claude brain
+  itself is a later phase. Paper trading only, no live capital.
 
 Python (pandas, NumPy), SQL, Git.
